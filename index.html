@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce sederhana</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>GEMASSH CUP CAKE 🧁</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Selamat Datang di Toko Gemassh Cup Cake</h2>
+    <p>Selamat datang di Gemassh Cupcake, surganya cupcake lucu, manis, dan super gemas! 
+        Kami menghadirkan berbagai varian cupcake homemade dengan rasa yang unik dan tampilan yang menggemaskan, cocok untuk menemani harimu atau jadi hadiah spesial untuk orang tersayang.
+        
+        Dengan bahan-bahan pilihan, dekorasi imut, dan sentuhan cinta di setiap cupcake, Gemassh siap bikin hatimu meleleh di setiap gigitan! 🍓🍫🍒 </p>
+  </section>
+
+  <section class="produk">
+    <h2>Produk Menarik</h2>
+    <div class="produk-container">
+
+      <div class="card">
+        <img src="Produk 1.jpg" alt="Vanilla Sparkle">
+        <h3>Vanilla Sparkle</h3>
+        <p>Cupcake rasa vanila lembut dengan krim putih yang dihiasi sprinkle warna-warni. Simpel tapi elegan, cocok untuk semua kalangan. Wangi vanila-nya bikin suasana makin ceria! ✨🧁</p>
+        <span class="harga">Rp14.000</span>
+        <a href="produk1.html" class="btn-beli">Pesan Sekarang</a>
+      </div>
+
+      <div class="card">
+        <img src="Produk 2.jpg" alt="Oreo Crunch Delight">
+        <h3>Oreo Crunch Delight</h3>
+        <p>Cupcake super lembut dengan rasa coklat yang dipadukan dengan potongan biskuit Oreo di dalam adonan dan topping-nya. Dihiasi krim vanilla swirl dan setengah keping Oreo di atasnya. Sensasi renyah dan manis yang bikin susah move on! 🍪🖤🤍</p>
+        <span class="harga">Rp17.000</span>
+        <a href="produk2.html" class="btn-beli">Pesan Sekarang</a>
+      </div>
+
+      <div class="card">
+        <img src="Produk 3.jpg" alt="Strawberry Dream">
+        <h3>Strawberry Dream</h3>
+        <p>Cupcake dengan rasa stroberi segar, dihiasi krim pink lembut dan topping potongan stroberi asli. Aroma manis dan rasa buah yang menggoda cocok untuk pencinta rasa klasik yang feminin. 💖🍓</p>
+        <span class="harga">Rp15.000</span>
+        <a href="produk3.html" class="btn-beli">Pesan Sekarang</a>
+      </div>
+
+      <div class="card">
+        <img src="Produk 4.jpg" alt="Red Velvet Romance">
+        <h3>Red Velvet Romance</h3>
+        <p>Cupcake klasik dengan warna merah menggoda dan tekstur yang super lembut. Dipadukan dengan krim cheese frosting yang creamy dan sedikit asam, menjadikan perpaduan rasa yang elegan dan manis. Tampil cantik dengan taburan remahan red velvet di atasnya. ❤️🧁
+        <span class="harga">Rp18.000</span>
+        <a href="produk4.html" class="btn-beli">Pesan Sekarang</a>
+      </div>
+
+      <div class="card">
+        <img src="Produk 5.jpg" alt="Cherry Bloom">
+        <h3>Cherry Bloom</h3>
+        <p>Cupcake manis dengan rasa ceri yang lembut dan aroma segar. Dihiasi buttercream pink pastel dan topping buah cherry utuh di atasnya. Rasanya ceria, tampilannya menggoda, pas banget buat kamu si pencinta rasa manis dan segar! 🍒💗</p>
+        <span class="harga">Rp17.000</span>
+        <a href="produk5.html" class="btn-beli">Pesan Sekarang</a>
+      </div>
+
+  <!-- keranjang.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Keranjang Belanja</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛒 Keranjang </h1>
+
+  <main>
+    <h2>Isi Keranjang</h2>
+    <ul id="daftar-keranjang"></ul>
+    <p><strong>Total:</strong> Rp <span id="total">0</span></p>
+    <button onclick="kosongkanKeranjang">Hapus Semua</button>
+  </main>
+
+  <script>
+    const keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+    const daftar = document.getElementById('daftar-keranjang');
+    const total = document.getElementById('total');
+
+    let totalHarga = 0;
+    keranjang.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nama} - Rp${item.harga.toLocaleString('id-ID')}`;
+      daftar.appendChild(li);
+      totalHarga += item.harga;
+    });
+
+  </script>
+</body>
+</html>
+    
+    </div>
+  </section>
+  <section class="hero">
+    <h2>Hubungi Kami</h2>
+    <p>isi data pesanan kamu di bawah ini ya!</p>
+  </section>
+
+  <section class="produk">
+    <form class="form-kontak">
+      <label>Nama:</label><br />
+      <input type="text" placeholder="Nama kamu" /><br /><br />
+
+      <label>Email:</label><br />
+      <input type="email" placeholder="Email aktif" /><br /><br />
+
+      <label>Pesan:</label><br />
+      <textarea rows="5" placeholder="Tulis pesanmu di sini..."></textarea><br /><br />
+
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+</body>
+</html>
+  <footer>
+    <p>Hubungi kami: gemaashcake@gmail.com | 0815-7309-3316</p>
+    <p>&copy; 2025 gemasshcake</p>
+  </footer>
+  <style>
+.form-kontak {
+  background: #fff;
+  padding: 80px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(255,182,193,0.3);
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffc0cb;
+  border-radius: 8px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form-kontak button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-kontak button:hover {
+  background: #e60073;
+}
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+}
+
+header {
+  background-color: #ffb6c1;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  background-color: #ffe4ec;
+  padding: 30px 20px;
+}
+
+.hero h2 {
+  color: #d6336c;
+  font-size: 1.8rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.produk {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.produk h2 {
+  color: #d6336c;
+  margin-bottom: 30px;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid #ffc0cb;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(255,182,193,0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #ff69b4;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+.harga {
+  display: block;
+  color: #e60073;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn-beli {
+  background-color: #ff69b4;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-beli:hover {
+  background-color: #e60073;
+}
+
+footer {
+  background-color: #ffb6c1;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .produk-container {
+    grid-template-columns: 1fr;
+  }
+}
+</body>
+</html>
+
+
+.form-kontak {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(255,182,193,0.3);
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffc0cb;
+  border-radius: 8px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form-kontak button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-kontak button:hover {
+  background: #e60073;
+}
+
+
+
